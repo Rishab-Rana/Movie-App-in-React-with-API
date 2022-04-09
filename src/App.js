@@ -1,9 +1,13 @@
 import './App.css';
-import Header from './Navigation';
+import Header from './Component/Navigation';
 
 function App() {
+ 
+
   return (
-    <Header />
+    <div>
+      <Header />
+    </div>
   );
 }
 

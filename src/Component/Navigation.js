@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import MovieComponent from "./MovieComponent";
 
 const Component = styled.div`
 display: flex;
@@ -17,6 +18,14 @@ padding:10px;
 font-size:25px;
 font-weight:bold;
 box-shadow: 0 3px 6px #555;
+`;
+
+const MovielistContainer = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+padding: 30px;
+justify-content: space-evenly;
 `;
 
 const AppName = styled.div`
@@ -57,21 +66,31 @@ outline:none;
 margin-left: 15px;
 `;
 
-function Header(){
+function Header() {
+    const [searchQuery, updateSearchQuery] = userStage();
+    const onTextChange = (event) => {
+        updateSearchQuery(event.target.value);
+    };
     return <Component>
         <Head>
             <AppName>
                 <MovieImage src="/popcorn.png" />
                 React Movie App
-                </AppName>
-                <SearchBox>
-                    <SearchIcon src="/magnifying.png" />
-                    <SearchInput placeholder="Search Movie" />
-                </SearchBox>
-            </Head>
-        
-        </Component>
-    
+            </AppName>
+            <SearchBox>
+                <SearchIcon src="/magnifying.png" />
+                <SearchInput placeholder="Search Movie" value={searchQuery} onChange={onTextChange} />
+            </SearchBox>
+        </Head>
+        <MovielistContainer>
+            <MovieComponent />
+            <MovieComponent />
+            <MovieComponent />
+            <MovieComponent />
+        </MovielistContainer>
+
+    </Component>
+
 }
 
 export default Header;
