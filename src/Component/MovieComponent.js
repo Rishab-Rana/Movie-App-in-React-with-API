@@ -8,6 +8,15 @@ const MovieContainer = styled.div`
   width: 280px;
   box-shadow: 0 3px 10px 0 #aaa;
   cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 `;
 const CoverImage = styled.img`
   object-fit: cover;
@@ -16,7 +25,7 @@ const CoverImage = styled.img`
 const MovieName = styled.span`
   font-size: 18px;
   font-weight: 600;
-  color: black;
+  color: white;
   margin: 15px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -30,7 +39,7 @@ const InfoColumn = styled.div`
 const MovieInfo = styled.span`
   font-size: 16px;
   font-weight: 500;
-  color: black;
+  color: white;
   white-space: nowrap;
   overflow: hidden;
   text-transform: capitalize;

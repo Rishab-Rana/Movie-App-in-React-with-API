@@ -22,7 +22,7 @@ const InfoColumn = styled.div`
 const MovieName = styled.span`
   font-size: 22px;
   font-weight: 600;
-  color: black;
+  color: white;
   margin: 15px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -35,7 +35,7 @@ const MovieName = styled.span`
 const MovieInfo = styled.span`
   font-size: 16px;
   font-weight: 500;
-  color: black;
+  color: white;
   overflow: hidden;
   margin: 4px 0;
   text-transform: capitalize;
@@ -50,11 +50,12 @@ const Close = styled.span`
   color: black;
   background: lightgray;
   height: fit-content;
+  width: 50px;
   padding: 8px;
-  border-radius: 50%;
+  border-radius: 10%;
   cursor: pointer;
-  opacity: 0.8;
 `;
+
 const MovieInfoComponent = (props) => {
   const [movieInfo, setMovieInfo] = useState();
   const { selectedMovie } = props;
@@ -104,7 +105,7 @@ const MovieInfoComponent = (props) => {
               Plot: <span>{movieInfo?.Plot}</span>
             </MovieInfo>
           </InfoColumn>
-          <Close onClick={() => props.onMovieSelect()}>X</Close>
+          <Close onClick={() => props.onMovieSelect()}>Close</Close>
         </>
       ) : (
         "Loading..."
