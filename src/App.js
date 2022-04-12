@@ -3,6 +3,8 @@ import Axios from "axios";
 import styled from "styled-components";
 import MovieComponent from "./Component/MovieComponent";
 import MovieInfoComponent from "./Component/MovieInfoComponent";
+import LogoImg from "./assest/popcorn.png"
+import SearchImg from "./assest/magnifying.png"
 
 export const API_KEY = "2bed85c5";
 
@@ -94,11 +96,11 @@ function App() {
     <Container>
       <Header>
         <AppName>
-          <MovieImage src="/popcorn.png" />
+          <MovieImage src={LogoImg} />
           React Movie App
         </AppName>
         <SearchBox>
-          <SearchIcon src="/magnifying.png" />
+          <SearchIcon src={SearchImg} />
           <SearchInput
             placeholder="Search Movie"
             value={searchQuery}
@@ -117,7 +119,7 @@ function App() {
             />
           ))
         ) : (
-          <Placeholder src="/popcorn.png" />
+          <Placeholder src={LogoImg} />
         )}
       </MovieListContainer>
     </Container>
