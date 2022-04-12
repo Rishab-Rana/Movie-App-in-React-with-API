@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Movie-App-in-React-with-API/static/css/main.37602b4b.css",
+    "main.js": "/Movie-App-in-React-with-API/static/js/main.1a6e6641.js",
+    "static/media/popcorn.png": "/Movie-App-in-React-with-API/static/media/popcorn.57a1848e29052255134f.png",
+    "index.html": "/Movie-App-in-React-with-API/index.html",
+    "main.37602b4b.css.map": "/Movie-App-in-React-with-API/static/css/main.37602b4b.css.map",
+    "main.1a6e6641.js.map": "/Movie-App-in-React-with-API/static/js/main.1a6e6641.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37602b4b.css",
+    "static/js/main.1a6e6641.js"
+  ]
+}
