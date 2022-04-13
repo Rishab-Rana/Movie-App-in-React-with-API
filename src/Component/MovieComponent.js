@@ -4,15 +4,14 @@ import styled from "styled-components";
 const MovieContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  width: 280px;
+  width: 220px;
   box-shadow: 0 3px 10px 0 #aaa;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.4);
+  background: #181818;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  border-radius: 10px;
+  border-radius: 2px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -30,11 +29,14 @@ const MovieName = styled.span`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding:15px;
 `;
 const InfoColumn = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding:10px;
+  opacity: 50%;
 `;
 const MovieInfo = styled.span`
   font-size: 16px;
