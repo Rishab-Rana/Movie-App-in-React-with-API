@@ -3,10 +3,10 @@ import Axios from "axios";
 import styled from "styled-components";
 import MovieComponent from "./Component/MovieComponent";
 import MovieInfoComponent from "./Component/MovieInfoComponent";
-import LogoImg from "./assest/popcorn.png";
 import SearchImg from "./assest/magnifying.png";
 import UserIcon from "./assest/user-image.png";
 import Menu from "./assest/menu.png";
+import NewMovieList from "./Component/NewMovie"
 
 export const API_KEY = "2bed85c5";
 
@@ -68,10 +68,6 @@ const MovieListContainer = styled.div`
   justify-content: space-evenly;
   padding:50px 250px;
 `;
-const Placeholder = styled.div`
-  color:white;
-`;
-
 const SignIn = styled.button`
   background-color: transparent; 
   color: white; 
@@ -138,8 +134,7 @@ function App() {
       </Header>
       {selectedMovie && <MovieInfoComponent selectedMovie={selectedMovie} onMovieSelect={onMovieSelect}/>}
       <MovieListContainer>
-        {movieList?.length ? (
-          movieList.map((movie, index) => (
+        {movieList?.length ? (movieList.map((movie, index) => (
             <MovieComponent
               key={index}
               movie={movie}
@@ -147,8 +142,7 @@ function App() {
             />
           ))
         ) : (
-          <Placeholder>
-          </Placeholder>
+          <NewMovieList />
         )}
       </MovieListContainer>
     </Container>
