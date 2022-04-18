@@ -47,6 +47,7 @@ const MovieInfo = styled.span`
   text-transform: capitalize;
   text-overflow: ellipsis;
 `;
+
 const MovieComponent = (props) => {
   const { Title, Year, imdbID, Type, Poster } = props.movie;
 
